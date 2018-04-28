@@ -14,10 +14,8 @@ import { curry2, curry3 } from '@most/prelude'
 // Use `until` instead of `takeUntil`
 // Use `since` instead of `skipUntil`
 
-
 // defaultScheduler instance (exported directly without changes)
 const defaultScheduler = Most.defaultScheduler
-
 
 // @unary functions (exported directly without changes)
 
@@ -38,7 +36,6 @@ const fromPromise = Most.fromPromise
 const awaitPromises = Most.awaitPromises
 const throwError = Most.throwError
 const multicast = Most.multicast
-
 
 // @binary functions (exported after being modified with `curry2`)
 
@@ -82,11 +79,10 @@ const throttle = curry2(Most.throttle)
 const debounce = curry2(Most.debounce)
 // @aliases: `flatMapError`, `chainError`
 const recoverWith = curry2(Most.recoverWith)
-// @changed: wrap variadic function with binary function to handle case without capture 
+// @changed: wrap variadic function with binary function to handle case without capture
 const fromEvent = curry2((eventType, source) => Most.fromEvent(eventType, source, false))
 // @new: only available in most.js as a Stream method, but added for convenience
 const subscribe = curry2((observer, stream) => stream.subscribe(observer))
-
 
 // @trinary functions (exported after being modified with `curry3`)
 
@@ -101,11 +97,10 @@ const PropagateTask = curry3(Most.PropagateTask)
 const combine = curry3((f, stream1, stream2) => Most.combineArray(f, [stream1, stream2]))
 // @changed: wrap variadic function with trinary function to handle zipping two streams
 const zip = curry3((f, stream1, stream2) => Most.zipArray(f, [stream1, stream2]))
-// @new: wrap variadic function with trinary function to handle case with capture 
+// @new: wrap variadic function with trinary function to handle case with capture
 const fromEventWithCapture = curry3(
   (eventType, source, capture) => Most.fromEvent(eventType, source, capture)
 )
-
 
 // Functions are exported here in the same order they are exported in:
 // https://github.com/cujojs/most/blob/master/src/index.js
@@ -175,5 +170,5 @@ export {
   multicast,
   defaultScheduler,
   PropagateTask,
-  subscribe, 
+  subscribe
 }
