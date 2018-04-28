@@ -1,7 +1,7 @@
 {
   "name": "most-curried",
   "description": "A wrapper around Most.js 1.0 providing an auto-curried API + a few minor changes",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-alpha-02",
   "author": "Josh Burgess <joshburgess.webdev@gmail.com> (github.com/joshburgess)",
   "bugs": {
     "url": "https://github.com/joshburgess/most-curried/issues"
