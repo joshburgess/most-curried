@@ -1,4 +1,4 @@
-/** @license MIT License (c) copyright 2016 Josh Burgess, mostjs */
+/** @license MIT License (c) copyright 2018 Josh Burgess, 2016 mostjs */
 
 import * as Most from 'most'
 import { curry2, curry3 } from '@most/prelude'
